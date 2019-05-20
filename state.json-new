@@ -1,0 +1,3511 @@
+{
+  "data": {
+    "auth": {
+      "last-id": 0,
+      "users": null
+    },
+    "config": {
+      "core": {
+        "refresh": {
+          "hold": "2019-05-16T20:55:41.475113481Z"
+        }
+      }
+    },
+    "last-refresh-hints": "2019-05-16T14:55:41.475144883-04:00",
+    "patch-level": 6,
+    "patch-sublevel": 1,
+    "refresh-privacy-key": "k7X352q06qfbY4tr",
+    "snap-cookies": {
+      "kBTjRcXkqvW86crTBmS7n4FQL3yN5B3NQtqv6d0Fby8x": "core"
+    },
+    "snaps": {
+      "core": {
+        "type": "os",
+        "sequence": [
+          {
+            "name": "core",
+            "snap-id": "99T7MUlRhtI3U0QFgl5mXXESAiSwt776",
+            "revision": "6673"
+          }
+        ],
+        "active": true,
+        "current": "6673",
+        "channel": "stable",
+        "required": true
+      }
+    }
+  },
+  "changes": {
+    "1": {
+      "id": "1",
+      "kind": "seed",
+      "summary": "Initialize system state",
+      "status": 0,
+      "task-ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "1"
+      ],
+      "spawn-time": "2019-05-16T14:55:45.995092633-04:00"
+    }
+  },
+  "tasks": {
+    "1": {
+      "id": "1",
+      "kind": "mark-seeded",
+      "summary": "Mark system seeded",
+      "status": 0,
+      "wait-tasks": [
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.07136365-04:00"
+    },
+    "10": {
+      "id": "10",
+      "kind": "setup-aliases",
+      "summary": "Setup snap \"core\" aliases",
+      "status": 4,
+      "data": {
+        "snap-setup-task": "3"
+      },
+      "wait-tasks": [
+        "9"
+      ],
+      "halt-tasks": [
+        "11",
+        "13"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956754651-04:00",
+      "ready-time": "2019-05-16T14:56:12.169230106-04:00",
+      "doing-time": 20658130
+    },
+    "11": {
+      "id": "11",
+      "kind": "run-hook",
+      "summary": "Run install hook of \"core\" snap if present",
+      "status": 4,
+      "data": {
+        "hook-setup": {
+          "snap": "core",
+          "revision": "unset",
+          "hook": "install",
+          "optional": true
+        },
+        "snap-setup-task": "3"
+      },
+      "wait-tasks": [
+        "10"
+      ],
+      "halt-tasks": [
+        "12",
+        "13"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956756752-04:00",
+      "ready-time": "2019-05-16T14:56:12.206447983-04:00",
+      "doing-time": 12523061
+    },
+    "12": {
+      "id": "12",
+      "kind": "start-snap-services",
+      "summary": "Start snap \"core\" (6673) services",
+      "status": 4,
+      "data": {
+        "snap-setup-task": "3"
+      },
+      "wait-tasks": [
+        "11"
+      ],
+      "halt-tasks": [
+        "13"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956774952-04:00",
+      "ready-time": "2019-05-16T14:56:12.243636258-04:00",
+      "doing-time": 10795625
+    },
+    "13": {
+      "id": "13",
+      "kind": "run-hook",
+      "summary": "Run configure hook of \"core\" snap if present",
+      "status": 4,
+      "data": {
+        "hook-context": {
+          "use-defaults": true
+        },
+        "hook-setup": {
+          "snap": "core",
+          "revision": "unset",
+          "hook": "configure",
+          "optional": true,
+          "timeout": 300000000000,
+          "ignore-error": true,
+          "track-error": true
+        }
+      },
+      "wait-tasks": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "halt-tasks": [
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956780353-04:00",
+      "ready-time": "2019-05-16T14:56:12.276880152-04:00",
+      "doing-time": 16363041
+    },
+    "14": {
+      "id": "14",
+      "kind": "prerequisites",
+      "summary": "Ensure prerequisites for \"gnome-3-28-1804\" are available",
+      "status": 3,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "base": "core18",
+          "type": "app",
+          "snap-path": "/var/lib/snapd/seed/snaps/gnome-3-28-1804_36.snap",
+          "side-info": {
+            "name": "gnome-3-28-1804",
+            "snap-id": "TKv5Fm000l4XiUYJW9pjWHLkCPlDbIg1",
+            "revision": "36"
+          }
+        }
+      },
+      "wait-tasks": [
+        "13"
+      ],
+      "halt-tasks": [
+        "15",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.194522989-04:00",
+      "doing-time": 175469195647,
+      "at-time": "2019-05-20T15:05:40.742255254-04:00"
+    },
+    "15": {
+      "id": "15",
+      "kind": "prepare-snap",
+      "summary": "Prepare snap \"/var/lib/snapd/seed/snaps/gnome-3-28-1804_36.snap\" (36)",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "base": "core18",
+          "type": "app",
+          "snap-path": "/var/lib/snapd/seed/snaps/gnome-3-28-1804_36.snap",
+          "side-info": {
+            "name": "gnome-3-28-1804",
+            "snap-id": "TKv5Fm000l4XiUYJW9pjWHLkCPlDbIg1",
+            "revision": "36"
+          }
+        }
+      },
+      "wait-tasks": [
+        "14",
+        "13"
+      ],
+      "halt-tasks": [
+        "16",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.19453699-04:00"
+    },
+    "16": {
+      "id": "16",
+      "kind": "mount-snap",
+      "summary": "Mount snap \"gnome-3-28-1804\" (36)",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "15"
+      },
+      "wait-tasks": [
+        "15",
+        "13"
+      ],
+      "halt-tasks": [
+        "17",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.19454179-04:00"
+    },
+    "17": {
+      "id": "17",
+      "kind": "copy-snap-data",
+      "summary": "Copy snap \"gnome-3-28-1804\" data",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "15"
+      },
+      "wait-tasks": [
+        "16",
+        "13"
+      ],
+      "halt-tasks": [
+        "18",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.19454409-04:00"
+    },
+    "18": {
+      "id": "18",
+      "kind": "setup-profiles",
+      "summary": "Setup snap \"gnome-3-28-1804\" (36) security profiles",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "15"
+      },
+      "wait-tasks": [
+        "17",
+        "13"
+      ],
+      "halt-tasks": [
+        "19",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.19454569-04:00"
+    },
+    "19": {
+      "id": "19",
+      "kind": "link-snap",
+      "summary": "Make snap \"gnome-3-28-1804\" (36) available to the system",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "15"
+      },
+      "wait-tasks": [
+        "18",
+        "13"
+      ],
+      "halt-tasks": [
+        "20",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.19454749-04:00"
+    },
+    "2": {
+      "id": "2",
+      "kind": "prerequisites",
+      "summary": "Ensure prerequisites for \"core\" are available",
+      "status": 4,
+      "data": {
+        "snap-setup": {
+          "channel": "stable",
+          "type": "os",
+          "plugs-only": true,
+          "required": true,
+          "snap-path": "/var/lib/snapd/seed/snaps/core_6673.snap",
+          "side-info": {
+            "name": "core",
+            "snap-id": "99T7MUlRhtI3U0QFgl5mXXESAiSwt776",
+            "revision": "6673"
+          }
+        }
+      },
+      "halt-tasks": [
+        "3",
+        "13"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956629946-04:00",
+      "ready-time": "2019-05-16T14:55:46.026417454-04:00",
+      "doing-time": 9547669
+    },
+    "20": {
+      "id": "20",
+      "kind": "auto-connect",
+      "summary": "Automatically connect eligible plugs and slots of snap \"gnome-3-28-1804\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "15"
+      },
+      "wait-tasks": [
+        "19",
+        "13"
+      ],
+      "halt-tasks": [
+        "21",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.19454879-04:00"
+    },
+    "21": {
+      "id": "21",
+      "kind": "set-auto-aliases",
+      "summary": "Set automatic aliases for snap \"gnome-3-28-1804\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "15"
+      },
+      "wait-tasks": [
+        "20",
+        "13"
+      ],
+      "halt-tasks": [
+        "22",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.19454989-04:00"
+    },
+    "22": {
+      "id": "22",
+      "kind": "setup-aliases",
+      "summary": "Setup snap \"gnome-3-28-1804\" aliases",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "15"
+      },
+      "wait-tasks": [
+        "21",
+        "13"
+      ],
+      "halt-tasks": [
+        "23",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.19455109-04:00"
+    },
+    "23": {
+      "id": "23",
+      "kind": "run-hook",
+      "summary": "Run install hook of \"gnome-3-28-1804\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-setup": {
+          "snap": "gnome-3-28-1804",
+          "revision": "unset",
+          "hook": "install",
+          "optional": true
+        },
+        "snap-setup-task": "15"
+      },
+      "wait-tasks": [
+        "22",
+        "13"
+      ],
+      "halt-tasks": [
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.194553391-04:00"
+    },
+    "24": {
+      "id": "24",
+      "kind": "start-snap-services",
+      "summary": "Start snap \"gnome-3-28-1804\" (36) services",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "15"
+      },
+      "wait-tasks": [
+        "23",
+        "13"
+      ],
+      "halt-tasks": [
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.194557591-04:00"
+    },
+    "25": {
+      "id": "25",
+      "kind": "run-hook",
+      "summary": "Run configure hook of \"gnome-3-28-1804\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-context": {
+          "use-defaults": true
+        },
+        "hook-setup": {
+          "snap": "gnome-3-28-1804",
+          "revision": "unset",
+          "hook": "configure",
+          "optional": true,
+          "timeout": 300000000000
+        }
+      },
+      "wait-tasks": [
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "13"
+      ],
+      "halt-tasks": [
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.194562591-04:00"
+    },
+    "26": {
+      "id": "26",
+      "kind": "prerequisites",
+      "summary": "Ensure prerequisites for \"gnome-calculator\" are available",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "base": "core18",
+          "type": "app",
+          "prereq": [
+            "gnome-3-28-1804",
+            "gtk-common-themes"
+          ],
+          "snap-path": "/var/lib/snapd/seed/snaps/gnome-calculator_406.snap",
+          "side-info": {
+            "name": "gnome-calculator",
+            "snap-id": "J8OcDPQ0JM8dbvk29HRqpWVI9kBw0atG",
+            "revision": "406"
+          }
+        }
+      },
+      "wait-tasks": [
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "27",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.27575561-04:00"
+    },
+    "27": {
+      "id": "27",
+      "kind": "prepare-snap",
+      "summary": "Prepare snap \"/var/lib/snapd/seed/snaps/gnome-calculator_406.snap\" (406)",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "base": "core18",
+          "type": "app",
+          "prereq": [
+            "gnome-3-28-1804",
+            "gtk-common-themes"
+          ],
+          "snap-path": "/var/lib/snapd/seed/snaps/gnome-calculator_406.snap",
+          "side-info": {
+            "name": "gnome-calculator",
+            "snap-id": "J8OcDPQ0JM8dbvk29HRqpWVI9kBw0atG",
+            "revision": "406"
+          }
+        }
+      },
+      "wait-tasks": [
+        "26",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "28",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275773311-04:00"
+    },
+    "28": {
+      "id": "28",
+      "kind": "mount-snap",
+      "summary": "Mount snap \"gnome-calculator\" (406)",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "27"
+      },
+      "wait-tasks": [
+        "27",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "29",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275783311-04:00"
+    },
+    "29": {
+      "id": "29",
+      "kind": "copy-snap-data",
+      "summary": "Copy snap \"gnome-calculator\" data",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "27"
+      },
+      "wait-tasks": [
+        "28",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "30",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275786311-04:00"
+    },
+    "3": {
+      "id": "3",
+      "kind": "prepare-snap",
+      "summary": "Prepare snap \"/var/lib/snapd/seed/snaps/core_6673.snap\" (6673)",
+      "status": 4,
+      "data": {
+        "snap-setup": {
+          "channel": "stable",
+          "type": "os",
+          "plugs-only": true,
+          "required": true,
+          "snap-path": "/var/lib/snapd/seed/snaps/core_6673.snap",
+          "side-info": {
+            "name": "core",
+            "snap-id": "99T7MUlRhtI3U0QFgl5mXXESAiSwt776",
+            "revision": "6673"
+          }
+        }
+      },
+      "wait-tasks": [
+        "2"
+      ],
+      "halt-tasks": [
+        "4",
+        "13"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956740451-04:00",
+      "ready-time": "2019-05-16T14:55:46.055594381-04:00",
+      "doing-time": 10296398
+    },
+    "30": {
+      "id": "30",
+      "kind": "setup-profiles",
+      "summary": "Setup snap \"gnome-calculator\" (406) security profiles",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "27"
+      },
+      "wait-tasks": [
+        "29",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "31",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275788112-04:00"
+    },
+    "31": {
+      "id": "31",
+      "kind": "link-snap",
+      "summary": "Make snap \"gnome-calculator\" (406) available to the system",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "27"
+      },
+      "wait-tasks": [
+        "30",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "32",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275789812-04:00"
+    },
+    "32": {
+      "id": "32",
+      "kind": "auto-connect",
+      "summary": "Automatically connect eligible plugs and slots of snap \"gnome-calculator\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "27"
+      },
+      "wait-tasks": [
+        "31",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "33",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275791212-04:00"
+    },
+    "33": {
+      "id": "33",
+      "kind": "set-auto-aliases",
+      "summary": "Set automatic aliases for snap \"gnome-calculator\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "27"
+      },
+      "wait-tasks": [
+        "32",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "34",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275792512-04:00"
+    },
+    "34": {
+      "id": "34",
+      "kind": "setup-aliases",
+      "summary": "Setup snap \"gnome-calculator\" aliases",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "27"
+      },
+      "wait-tasks": [
+        "33",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "35",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275794212-04:00"
+    },
+    "35": {
+      "id": "35",
+      "kind": "run-hook",
+      "summary": "Run install hook of \"gnome-calculator\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-setup": {
+          "snap": "gnome-calculator",
+          "revision": "unset",
+          "hook": "install",
+          "optional": true
+        },
+        "snap-setup-task": "27"
+      },
+      "wait-tasks": [
+        "34",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275796612-04:00"
+    },
+    "36": {
+      "id": "36",
+      "kind": "start-snap-services",
+      "summary": "Start snap \"gnome-calculator\" (406) services",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "27"
+      },
+      "wait-tasks": [
+        "35",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275802412-04:00"
+    },
+    "37": {
+      "id": "37",
+      "kind": "run-hook",
+      "summary": "Run configure hook of \"gnome-calculator\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-context": {
+          "use-defaults": true
+        },
+        "hook-setup": {
+          "snap": "gnome-calculator",
+          "revision": "unset",
+          "hook": "configure",
+          "optional": true,
+          "timeout": 300000000000
+        }
+      },
+      "wait-tasks": [
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "halt-tasks": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.275807512-04:00"
+    },
+    "38": {
+      "id": "38",
+      "kind": "prerequisites",
+      "summary": "Ensure prerequisites for \"gnome-characters\" are available",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "base": "core18",
+          "type": "app",
+          "prereq": [
+            "gtk-common-themes",
+            "gnome-3-28-1804"
+          ],
+          "snap-path": "/var/lib/snapd/seed/snaps/gnome-characters_254.snap",
+          "side-info": {
+            "name": "gnome-characters",
+            "snap-id": "qJcS3UjpF9AMJKWAiKwA5EWbm0y6Uduw",
+            "revision": "254"
+          }
+        }
+      },
+      "wait-tasks": [
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "39",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377165931-04:00"
+    },
+    "39": {
+      "id": "39",
+      "kind": "prepare-snap",
+      "summary": "Prepare snap \"/var/lib/snapd/seed/snaps/gnome-characters_254.snap\" (254)",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "base": "core18",
+          "type": "app",
+          "prereq": [
+            "gtk-common-themes",
+            "gnome-3-28-1804"
+          ],
+          "snap-path": "/var/lib/snapd/seed/snaps/gnome-characters_254.snap",
+          "side-info": {
+            "name": "gnome-characters",
+            "snap-id": "qJcS3UjpF9AMJKWAiKwA5EWbm0y6Uduw",
+            "revision": "254"
+          }
+        }
+      },
+      "wait-tasks": [
+        "38",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "40",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377177832-04:00"
+    },
+    "4": {
+      "id": "4",
+      "kind": "mount-snap",
+      "summary": "Mount snap \"core\" (6673)",
+      "status": 4,
+      "data": {
+        "snap-setup-task": "3",
+        "snap-type": "os"
+      },
+      "wait-tasks": [
+        "3"
+      ],
+      "halt-tasks": [
+        "5",
+        "13"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956745651-04:00",
+      "ready-time": "2019-05-16T14:55:46.689488069-04:00",
+      "doing-time": 622662954
+    },
+    "40": {
+      "id": "40",
+      "kind": "mount-snap",
+      "summary": "Mount snap \"gnome-characters\" (254)",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "39"
+      },
+      "wait-tasks": [
+        "39",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "41",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377182832-04:00"
+    },
+    "41": {
+      "id": "41",
+      "kind": "copy-snap-data",
+      "summary": "Copy snap \"gnome-characters\" data",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "39"
+      },
+      "wait-tasks": [
+        "40",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "42",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377185032-04:00"
+    },
+    "42": {
+      "id": "42",
+      "kind": "setup-profiles",
+      "summary": "Setup snap \"gnome-characters\" (254) security profiles",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "39"
+      },
+      "wait-tasks": [
+        "41",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "43",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377186332-04:00"
+    },
+    "43": {
+      "id": "43",
+      "kind": "link-snap",
+      "summary": "Make snap \"gnome-characters\" (254) available to the system",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "39"
+      },
+      "wait-tasks": [
+        "42",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "44",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377187832-04:00"
+    },
+    "44": {
+      "id": "44",
+      "kind": "auto-connect",
+      "summary": "Automatically connect eligible plugs and slots of snap \"gnome-characters\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "39"
+      },
+      "wait-tasks": [
+        "43",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "45",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377189432-04:00"
+    },
+    "45": {
+      "id": "45",
+      "kind": "set-auto-aliases",
+      "summary": "Set automatic aliases for snap \"gnome-characters\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "39"
+      },
+      "wait-tasks": [
+        "44",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "46",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377190532-04:00"
+    },
+    "46": {
+      "id": "46",
+      "kind": "setup-aliases",
+      "summary": "Setup snap \"gnome-characters\" aliases",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "39"
+      },
+      "wait-tasks": [
+        "45",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "47",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377191732-04:00"
+    },
+    "47": {
+      "id": "47",
+      "kind": "run-hook",
+      "summary": "Run install hook of \"gnome-characters\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-setup": {
+          "snap": "gnome-characters",
+          "revision": "unset",
+          "hook": "install",
+          "optional": true
+        },
+        "snap-setup-task": "39"
+      },
+      "wait-tasks": [
+        "46",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377193832-04:00"
+    },
+    "48": {
+      "id": "48",
+      "kind": "start-snap-services",
+      "summary": "Start snap \"gnome-characters\" (254) services",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "39"
+      },
+      "wait-tasks": [
+        "47",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377198033-04:00"
+    },
+    "49": {
+      "id": "49",
+      "kind": "run-hook",
+      "summary": "Run configure hook of \"gnome-characters\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-context": {
+          "use-defaults": true
+        },
+        "hook-setup": {
+          "snap": "gnome-characters",
+          "revision": "unset",
+          "hook": "configure",
+          "optional": true,
+          "timeout": 300000000000
+        }
+      },
+      "wait-tasks": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "halt-tasks": [
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.377205333-04:00"
+    },
+    "5": {
+      "id": "5",
+      "kind": "copy-snap-data",
+      "summary": "Copy snap \"core\" data",
+      "status": 4,
+      "data": {
+        "snap-setup-task": "3"
+      },
+      "wait-tasks": [
+        "4"
+      ],
+      "halt-tasks": [
+        "6",
+        "13"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956747651-04:00",
+      "ready-time": "2019-05-16T14:55:46.731512792-04:00",
+      "doing-time": 11997264
+    },
+    "50": {
+      "id": "50",
+      "kind": "prerequisites",
+      "summary": "Ensure prerequisites for \"gnome-logs\" are available",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "base": "core18",
+          "type": "app",
+          "prereq": [
+            "gtk-common-themes",
+            "gnome-3-28-1804"
+          ],
+          "snap-path": "/var/lib/snapd/seed/snaps/gnome-logs_61.snap",
+          "side-info": {
+            "name": "gnome-logs",
+            "snap-id": "kIMfmZTJspWa8vtfbgU3W9Nbv4V5Qgmh",
+            "revision": "61"
+          }
+        }
+      },
+      "wait-tasks": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "51",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394463817-04:00"
+    },
+    "51": {
+      "id": "51",
+      "kind": "prepare-snap",
+      "summary": "Prepare snap \"/var/lib/snapd/seed/snaps/gnome-logs_61.snap\" (61)",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "base": "core18",
+          "type": "app",
+          "prereq": [
+            "gtk-common-themes",
+            "gnome-3-28-1804"
+          ],
+          "snap-path": "/var/lib/snapd/seed/snaps/gnome-logs_61.snap",
+          "side-info": {
+            "name": "gnome-logs",
+            "snap-id": "kIMfmZTJspWa8vtfbgU3W9Nbv4V5Qgmh",
+            "revision": "61"
+          }
+        }
+      },
+      "wait-tasks": [
+        "50",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "52",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394477018-04:00"
+    },
+    "52": {
+      "id": "52",
+      "kind": "mount-snap",
+      "summary": "Mount snap \"gnome-logs\" (61)",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "51"
+      },
+      "wait-tasks": [
+        "51",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "53",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394481918-04:00"
+    },
+    "53": {
+      "id": "53",
+      "kind": "copy-snap-data",
+      "summary": "Copy snap \"gnome-logs\" data",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "51"
+      },
+      "wait-tasks": [
+        "52",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "54",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394484418-04:00"
+    },
+    "54": {
+      "id": "54",
+      "kind": "setup-profiles",
+      "summary": "Setup snap \"gnome-logs\" (61) security profiles",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "51"
+      },
+      "wait-tasks": [
+        "53",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "55",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394488718-04:00"
+    },
+    "55": {
+      "id": "55",
+      "kind": "link-snap",
+      "summary": "Make snap \"gnome-logs\" (61) available to the system",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "51"
+      },
+      "wait-tasks": [
+        "54",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "56",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394490618-04:00"
+    },
+    "56": {
+      "id": "56",
+      "kind": "auto-connect",
+      "summary": "Automatically connect eligible plugs and slots of snap \"gnome-logs\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "51"
+      },
+      "wait-tasks": [
+        "55",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "57",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394492418-04:00"
+    },
+    "57": {
+      "id": "57",
+      "kind": "set-auto-aliases",
+      "summary": "Set automatic aliases for snap \"gnome-logs\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "51"
+      },
+      "wait-tasks": [
+        "56",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "58",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394493718-04:00"
+    },
+    "58": {
+      "id": "58",
+      "kind": "setup-aliases",
+      "summary": "Setup snap \"gnome-logs\" aliases",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "51"
+      },
+      "wait-tasks": [
+        "57",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "59",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394495118-04:00"
+    },
+    "59": {
+      "id": "59",
+      "kind": "run-hook",
+      "summary": "Run install hook of \"gnome-logs\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-setup": {
+          "snap": "gnome-logs",
+          "revision": "unset",
+          "hook": "install",
+          "optional": true
+        },
+        "snap-setup-task": "51"
+      },
+      "wait-tasks": [
+        "58",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394497618-04:00"
+    },
+    "6": {
+      "id": "6",
+      "kind": "setup-profiles",
+      "summary": "Setup snap \"core\" (6673) security profiles",
+      "status": 4,
+      "data": {
+        "snap-setup-task": "3"
+      },
+      "wait-tasks": [
+        "5"
+      ],
+      "halt-tasks": [
+        "7",
+        "13"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956748951-04:00",
+      "ready-time": "2019-05-16T14:55:47.556133004-04:00",
+      "doing-time": 805839587
+    },
+    "60": {
+      "id": "60",
+      "kind": "start-snap-services",
+      "summary": "Start snap \"gnome-logs\" (61) services",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "51"
+      },
+      "wait-tasks": [
+        "59",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394501919-04:00"
+    },
+    "61": {
+      "id": "61",
+      "kind": "run-hook",
+      "summary": "Run configure hook of \"gnome-logs\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-context": {
+          "use-defaults": true
+        },
+        "hook-setup": {
+          "snap": "gnome-logs",
+          "revision": "unset",
+          "hook": "configure",
+          "optional": true,
+          "timeout": 300000000000
+        }
+      },
+      "wait-tasks": [
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "halt-tasks": [
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.394506719-04:00"
+    },
+    "62": {
+      "id": "62",
+      "kind": "prerequisites",
+      "summary": "Ensure prerequisites for \"gnome-system-monitor\" are available",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "base": "core18",
+          "type": "app",
+          "prereq": [
+            "gtk-common-themes",
+            "gnome-3-28-1804"
+          ],
+          "snap-path": "/var/lib/snapd/seed/snaps/gnome-system-monitor_77.snap",
+          "side-info": {
+            "name": "gnome-system-monitor",
+            "snap-id": "9BTClmjz31r0UltmbJ5nnGe0Xm1AzfMp",
+            "revision": "77"
+          }
+        }
+      },
+      "wait-tasks": [
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "63",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431499486-04:00"
+    },
+    "63": {
+      "id": "63",
+      "kind": "prepare-snap",
+      "summary": "Prepare snap \"/var/lib/snapd/seed/snaps/gnome-system-monitor_77.snap\" (77)",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "base": "core18",
+          "type": "app",
+          "prereq": [
+            "gtk-common-themes",
+            "gnome-3-28-1804"
+          ],
+          "snap-path": "/var/lib/snapd/seed/snaps/gnome-system-monitor_77.snap",
+          "side-info": {
+            "name": "gnome-system-monitor",
+            "snap-id": "9BTClmjz31r0UltmbJ5nnGe0Xm1AzfMp",
+            "revision": "77"
+          }
+        }
+      },
+      "wait-tasks": [
+        "62",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "64",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431511986-04:00"
+    },
+    "64": {
+      "id": "64",
+      "kind": "mount-snap",
+      "summary": "Mount snap \"gnome-system-monitor\" (77)",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "63"
+      },
+      "wait-tasks": [
+        "63",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "65",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431516886-04:00"
+    },
+    "65": {
+      "id": "65",
+      "kind": "copy-snap-data",
+      "summary": "Copy snap \"gnome-system-monitor\" data",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "63"
+      },
+      "wait-tasks": [
+        "64",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "66",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431519586-04:00"
+    },
+    "66": {
+      "id": "66",
+      "kind": "setup-profiles",
+      "summary": "Setup snap \"gnome-system-monitor\" (77) security profiles",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "63"
+      },
+      "wait-tasks": [
+        "65",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "67",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431521086-04:00"
+    },
+    "67": {
+      "id": "67",
+      "kind": "link-snap",
+      "summary": "Make snap \"gnome-system-monitor\" (77) available to the system",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "63"
+      },
+      "wait-tasks": [
+        "66",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "68",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431522787-04:00"
+    },
+    "68": {
+      "id": "68",
+      "kind": "auto-connect",
+      "summary": "Automatically connect eligible plugs and slots of snap \"gnome-system-monitor\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "63"
+      },
+      "wait-tasks": [
+        "67",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "69",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431525287-04:00"
+    },
+    "69": {
+      "id": "69",
+      "kind": "set-auto-aliases",
+      "summary": "Set automatic aliases for snap \"gnome-system-monitor\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "63"
+      },
+      "wait-tasks": [
+        "68",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "70",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431527387-04:00"
+    },
+    "7": {
+      "id": "7",
+      "kind": "link-snap",
+      "summary": "Make snap \"core\" (6673) available to the system",
+      "status": 4,
+      "data": {
+        "old-candidate-index": -1,
+        "old-channel": "",
+        "old-classic": false,
+        "old-current": "unset",
+        "old-devmode": false,
+        "old-ignore-validation": false,
+        "old-jailmode": false,
+        "old-trymode": false,
+        "snap-setup-task": "3"
+      },
+      "wait-tasks": [
+        "6"
+      ],
+      "halt-tasks": [
+        "8",
+        "13"
+      ],
+      "log": [
+        "2019-05-16T14:56:11-04:00 INFO Requested daemon restart."
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956750351-04:00",
+      "ready-time": "2019-05-16T14:56:11.036701153-04:00",
+      "doing-time": 23482828108
+    },
+    "70": {
+      "id": "70",
+      "kind": "setup-aliases",
+      "summary": "Setup snap \"gnome-system-monitor\" aliases",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "63"
+      },
+      "wait-tasks": [
+        "69",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "71",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431528687-04:00"
+    },
+    "71": {
+      "id": "71",
+      "kind": "run-hook",
+      "summary": "Run install hook of \"gnome-system-monitor\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-setup": {
+          "snap": "gnome-system-monitor",
+          "revision": "unset",
+          "hook": "install",
+          "optional": true
+        },
+        "snap-setup-task": "63"
+      },
+      "wait-tasks": [
+        "70",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431530887-04:00"
+    },
+    "72": {
+      "id": "72",
+      "kind": "start-snap-services",
+      "summary": "Start snap \"gnome-system-monitor\" (77) services",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "63"
+      },
+      "wait-tasks": [
+        "71",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431534887-04:00"
+    },
+    "73": {
+      "id": "73",
+      "kind": "run-hook",
+      "summary": "Run configure hook of \"gnome-system-monitor\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-context": {
+          "use-defaults": true
+        },
+        "hook-setup": {
+          "snap": "gnome-system-monitor",
+          "revision": "unset",
+          "hook": "configure",
+          "optional": true,
+          "timeout": 300000000000
+        }
+      },
+      "wait-tasks": [
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61"
+      ],
+      "halt-tasks": [
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.431539787-04:00"
+    },
+    "74": {
+      "id": "74",
+      "kind": "prerequisites",
+      "summary": "Ensure prerequisites for \"gtk-common-themes\" are available",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "type": "app",
+          "snap-path": "/var/lib/snapd/seed/snaps/gtk-common-themes_1198.snap",
+          "side-info": {
+            "name": "gtk-common-themes",
+            "snap-id": "jZLfBRzf1cYlYysIjD2bwSzNtngY0qit",
+            "revision": "1198"
+          }
+        }
+      },
+      "wait-tasks": [
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "75",
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994668716-04:00"
+    },
+    "75": {
+      "id": "75",
+      "kind": "prepare-snap",
+      "summary": "Prepare snap \"/var/lib/snapd/seed/snaps/gtk-common-themes_1198.snap\" (1198)",
+      "status": 0,
+      "data": {
+        "snap-setup": {
+          "channel": "stable/ubuntu-19.04",
+          "type": "app",
+          "snap-path": "/var/lib/snapd/seed/snaps/gtk-common-themes_1198.snap",
+          "side-info": {
+            "name": "gtk-common-themes",
+            "snap-id": "jZLfBRzf1cYlYysIjD2bwSzNtngY0qit",
+            "revision": "1198"
+          }
+        }
+      },
+      "wait-tasks": [
+        "74",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "76",
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994820522-04:00"
+    },
+    "76": {
+      "id": "76",
+      "kind": "mount-snap",
+      "summary": "Mount snap \"gtk-common-themes\" (1198)",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "75"
+      },
+      "wait-tasks": [
+        "75",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "77",
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994829522-04:00"
+    },
+    "77": {
+      "id": "77",
+      "kind": "copy-snap-data",
+      "summary": "Copy snap \"gtk-common-themes\" data",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "75"
+      },
+      "wait-tasks": [
+        "76",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "78",
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994854523-04:00"
+    },
+    "78": {
+      "id": "78",
+      "kind": "setup-profiles",
+      "summary": "Setup snap \"gtk-common-themes\" (1198) security profiles",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "75"
+      },
+      "wait-tasks": [
+        "77",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "79",
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994857123-04:00"
+    },
+    "79": {
+      "id": "79",
+      "kind": "link-snap",
+      "summary": "Make snap \"gtk-common-themes\" (1198) available to the system",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "75"
+      },
+      "wait-tasks": [
+        "78",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "80",
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994864123-04:00"
+    },
+    "8": {
+      "id": "8",
+      "kind": "auto-connect",
+      "summary": "Automatically connect eligible plugs and slots of snap \"core\"",
+      "status": 4,
+      "data": {
+        "snap-setup-task": "3"
+      },
+      "wait-tasks": [
+        "7"
+      ],
+      "halt-tasks": [
+        "9",
+        "13"
+      ],
+      "log": [
+        "2019-05-16T14:56:11-04:00 INFO Waiting for restart...",
+        "2019-05-16T14:56:11-04:00 INFO Waiting for restart..."
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956751451-04:00",
+      "ready-time": "2019-05-16T14:56:12.090157057-04:00",
+      "doing-time": 67702732
+    },
+    "80": {
+      "id": "80",
+      "kind": "auto-connect",
+      "summary": "Automatically connect eligible plugs and slots of snap \"gtk-common-themes\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "75"
+      },
+      "wait-tasks": [
+        "79",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "81",
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994865724-04:00"
+    },
+    "81": {
+      "id": "81",
+      "kind": "set-auto-aliases",
+      "summary": "Set automatic aliases for snap \"gtk-common-themes\"",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "75"
+      },
+      "wait-tasks": [
+        "80",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "82",
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994867124-04:00"
+    },
+    "82": {
+      "id": "82",
+      "kind": "setup-aliases",
+      "summary": "Setup snap \"gtk-common-themes\" aliases",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "75"
+      },
+      "wait-tasks": [
+        "81",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "83",
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994868724-04:00"
+    },
+    "83": {
+      "id": "83",
+      "kind": "run-hook",
+      "summary": "Run install hook of \"gtk-common-themes\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-setup": {
+          "snap": "gtk-common-themes",
+          "revision": "unset",
+          "hook": "install",
+          "optional": true
+        },
+        "snap-setup-task": "75"
+      },
+      "wait-tasks": [
+        "82",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "84",
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994871424-04:00"
+    },
+    "84": {
+      "id": "84",
+      "kind": "start-snap-services",
+      "summary": "Start snap \"gtk-common-themes\" (1198) services",
+      "status": 0,
+      "data": {
+        "snap-setup-task": "75"
+      },
+      "wait-tasks": [
+        "83",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "85",
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994879624-04:00"
+    },
+    "85": {
+      "id": "85",
+      "kind": "run-hook",
+      "summary": "Run configure hook of \"gtk-common-themes\" snap if present",
+      "status": 0,
+      "data": {
+        "hook-context": {
+          "use-defaults": true
+        },
+        "hook-setup": {
+          "snap": "gtk-common-themes",
+          "revision": "unset",
+          "hook": "configure",
+          "optional": true,
+          "timeout": 300000000000
+        }
+      },
+      "wait-tasks": [
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73"
+      ],
+      "halt-tasks": [
+        "1"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:45.994885324-04:00"
+    },
+    "9": {
+      "id": "9",
+      "kind": "set-auto-aliases",
+      "summary": "Set automatic aliases for snap \"core\"",
+      "status": 4,
+      "data": {
+        "old-aliases-v2": null,
+        "snap-setup-task": "3"
+      },
+      "wait-tasks": [
+        "8"
+      ],
+      "halt-tasks": [
+        "10",
+        "13"
+      ],
+      "change": "1",
+      "spawn-time": "2019-05-16T14:55:43.956752451-04:00",
+      "ready-time": "2019-05-16T14:56:12.13629712-04:00",
+      "doing-time": 20972937
+    }
+  },
+  "last-change-id": 2,
+  "last-task-id": 87,
+  "last-lane-id": 0
+}
